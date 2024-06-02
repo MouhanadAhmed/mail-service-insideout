@@ -44,7 +44,7 @@ app.post('/send-email', (req, res) => {
   
   
  
-
+    res.json({message:"success"})
 });
 
 app.listen(port, () => {
