@@ -5,7 +5,7 @@
   "main": "./src/email/sendEmail.js",
   "type": "module",
   "scripts": {
-    "start": "node sendEmail.js",
+    "start": "node ./src/email/sendEmail.js",
     "build": "node build.js"
   },
   "author": "mouhanad ahmed",
