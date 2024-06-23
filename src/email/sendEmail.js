@@ -10,7 +10,7 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(cors());
 app.post('/send-email', (req, res) => {
-  const { name, email, message, subject,company,website,phone,service } = req.body;
+  const { name, email, message, subject,company,website,phone,service,adminMail } = req.body;
 
 
     const transporter = createTransport({
@@ -27,7 +27,7 @@ app.post('/send-email', (req, res) => {
     // send mail with defined transport object
      transporter.sendMail({
       from: '"IN Marketing mail service 👻" <serverinmarketing@gmail.com>', // sender address
-      to: email, // list of receivers
+      to: adminMail, // list of receivers
       subject: "New Lead", // Subject line
     //   text: "Hello world?", // plain text body
       html:emailTemplate({message,subject,name,company,website,phone,email,service}), // html body
