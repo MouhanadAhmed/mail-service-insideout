@@ -10,15 +10,15 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(cors());
 app.post('/send-email', (req, res) => {
-  const { name, email, message, subject,company,website,phone,service,adminMail } = req.body;
+  const { name,  country,phone,service } = req.body;
 
 
     const transporter = createTransport({
     service: 'gmail',
     auth: {
       // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-      user: 'serverinmarketing@gmail.com',
-      pass: 'qjmwzmlklqcmzfdw'
+      user: "clinic.insideout@gmail.com",
+      pass: "lrymuyxusmudcrec"
     }
   });
 
@@ -26,14 +26,14 @@ app.post('/send-email', (req, res) => {
 
     // send mail with defined transport object
      transporter.sendMail({
-      from: '"IN Marketing mail service 👻" <serverinmarketing@gmail.com>', // sender address
-      to: adminMail, // list of receivers
+      from: '"inside out mail service " <clinic.insideout@gmail.com>', // sender address
+      to: 'clinic.insideout@gmail.com', // list of receivers
       subject: "New Lead", // Subject line
     //   text: "Hello world?", // plain text body
-      html:emailTemplate({message,subject,name,company,website,phone,email,service}), // html body
+      html:emailTemplate({country,name,phone,service}), // html body
     });
   
-    console.log("Message sent: %s",message,subject );
+    // console.log("Message sent: %s",subject );
     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
   
     //
@@ -43,7 +43,23 @@ app.post('/send-email', (req, res) => {
     //
   
   
- 
+    fetch('https://sheetdb.io/api/v1/cyqlw6y1rmb88', {
+      method: 'POST',
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          data: [
+             {
+              name:name,
+              phone:phone,
+              country:country,
+              service:service
+             }
+          ]
+      })
+  })
     res.json({message:"success"})
 });
 

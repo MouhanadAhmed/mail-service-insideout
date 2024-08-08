@@ -1,5 +1,5 @@
 {
-  "name": "mail-service",
+  "name": "mail-service-insideout",
   "version": "1.0.0",
   "description": "",
   "main": "./src/email/sendEmail.js",

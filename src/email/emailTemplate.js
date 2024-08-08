@@ -113,15 +113,7 @@ export function emailTemplate (props){
             <tr>
             <td align="center" valign="top" width="600">
             <![endif]-->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-              <tr>
-                <td align="center" valign="top" style="padding: 36px 24px;">
-                  <a href="https://www.blogdesire.com" target="_blank" style="display: inline-block;">
-                    <img src="https://www.blogdesire.com/wp-content/uploads/2019/07/blogdesire-1.png" alt="Logo" border="0" width="48" style="display: block; width: 48px; max-width: 48px; min-width: 48px;">
-                  </a>
-                </td>
-              </tr>
-            </table>
+          
             <!--[if (gte mso 9)|(IE)]>
             </td>
             </tr>
@@ -142,7 +134,10 @@ export function emailTemplate (props){
             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-                  <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">${props.subject}</h1>
+                <a href="https://mouhanadahmed.github.io/insideout/" target="_blank" style="display: inline-block;">
+                <img src="https://res.cloudinary.com/dnj83wpoa/image/upload/f_auto,q_auto/oba9taqyeaatlxcjatlz" alt="Logo" border="0" width="250" style="display: block; width: 250px; max-width: 250px; min-width: 48px; margin:auto">
+                  </a>  
+                
                 </td>
               </tr>
             </table>
@@ -169,12 +164,9 @@ export function emailTemplate (props){
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
                 ${props.name? ` <p style="margin: 0;">Name : ${props.name}</p>`:""}
-                  ${props.company?`<p style="margin: 0;">Company: ${props.company}</p>`:""}
-                 ${props.website?` <p style="margin: 0;">Website or social media link: ${props.website}</p>`:""}
+                  ${props.country?`<p style="margin: 0;">country: ${props.country}</p>`:""}
                   ${props.phone?`<p style="margin: 0;">Phone: ${props.phone}</p>`:""}
-                  ${props.email?`<p style="margin: 0;">Email: ${props.email}</p>`:""}
                   ${props.service?`<p style="margin: 0;">Service type: ${props.service}</p>`:""}
-                  ${props.message?`<p style="margin: 0;">Message: ${props.message}</p>`:""}
                 </td>
               </tr>
               <!-- end copy -->
@@ -189,7 +181,7 @@ export function emailTemplate (props){
               <!-- start copy -->
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                  <p style="margin: 0;">Cheers,<br> IN Marketing server</p>
+                  <p style="margin: 0;">Cheers,<br> Inside out clinic server</p>
                 </td>
               </tr>
               <!-- end copy -->
